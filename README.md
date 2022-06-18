@@ -2,7 +2,7 @@
   <h1>This is a MADAF project.</h1>
 </div>
 
-This is your MADAF project. This project uses:
+This is a default MADAF web application project. This project uses:
 - ```madaf```
 - ```madaf_http```
 
