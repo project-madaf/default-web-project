@@ -21,7 +21,7 @@ Powershell:
 
 ``` powershell
 > madaf depen install hello_world
-> madaf run dev hello_world
+> madaf app run hello_world
 ```
 
 Open [http://localhost:8080](http://localhost:8080) on the browser, you should see a text that said 'Hello, world!'. Note that you can build other kind of apps than just web apps.
@@ -36,12 +36,10 @@ This is where you are going to store your applications.
 
 That file is the main entry point into your app.
 
-### ```./configs/```
+### ```./configs/[app_name]/main.py```
 
-This is your configuration files, powered by Python.
-In a nutshell, your configuration files are merely just 
-a bunch of Python modules. Each subfolder belongs to it's 
-respective application.
+This is your configuration file. Multiple configuration files 
+exist so not everything must be written in one file.
 
 ### ```./tests/```
 

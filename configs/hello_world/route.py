@@ -2,7 +2,8 @@
     Configure routing.
 '''
 
-from madaf_http.api.routing import link, config
+from madaf.api.config.override import AppConfig
+
 from apps.hello_world.main import home
 
 def route():
@@ -11,12 +12,20 @@ def route():
         This function configures the routing.
     '''
 
+    config = AppConfig('madaf_http')
+
     # This will configure the root page.
-    root_page = link('/', home)
-    # Default: text/plain
-    root_page.config['Content-Type']['media-type'] = 'text/plain'
-    # Default: UTF-16
-    root_page.config['content_type']['charset'] = 'UTF-8'
+    config.modify['link'] = {
+        '/': home
+    }
+
+    # Default:
+    # config.modify['/]['Content-Type] = {
+    #   'media-type': 'text/plain',
+    #   'charset': 'utf-8'
+    # }
+    config.modify['/']['Content-Type']['media-type'] = 'text/plain'
+    config.modify['/']['Content-Type']['charset'] = 'UTF-8'
 
     # This will configure the gateway option.
-    config['gateway'] = 'builtin'
+    config.modify['gateway'] = 'builtin'

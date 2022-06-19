@@ -4,7 +4,7 @@ This file is used to configure MADAF settings.
 
 '''
 
-from madaf.api.config import config
+from madaf.api.config.override import AppConfig, AssignID
 
 def general():
 
@@ -12,4 +12,10 @@ def general():
         This function configures the general behaviour of MEDAF.
     '''
 
-    config['Debug-Mode'] = True
+    # Assign an ID to your app.
+    AssignID('hello_world')
+
+    config = AppConfig('madaf')
+
+    # Debug mode.
+    config.modify['Debug-Mode'] = True
