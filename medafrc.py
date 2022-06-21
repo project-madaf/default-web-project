@@ -13,16 +13,20 @@ def main():
     config = RCConfig()
 
     # Project directory layout.
-    config.modify['Project-Layout'] = {
+    config.modify('Project-Layout', {
         'Root-Path':'.',
         'Apps-Path':'apps',
         'Configs-Path':'configs',
         'Tests-Path':'tests'
-    }
+    })
 
     # Installed apps. This is to ensure that only these
     # apps can access MADAF and MADAF plugins.
-    config.modify['Installed-Apps'] = [
+    config.modify('Installed-Apps', [
         'hello_world',
         'madaf_http'
-    ]
+    ])
+
+    config.modify('Debug-Mode',True)
+
+    config.load()

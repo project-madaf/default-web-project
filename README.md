@@ -28,26 +28,18 @@ Open [http://localhost:8080](http://localhost:8080) on the browser, you should s
 
 ## Directory Structure:
 
-### ```./apps/```
+-  ```./apps/``` : This is where you are going to store your applications.
 
-This is where you are going to store your applications.
+    - ```./apps/[app_id]/main.py``` : That file is the main entry point into your app.
 
-### ```./apps/[app_name]/main.py```
+- ```./configs/``` : This is your configuration folder. Instead of using YAML, JSON, or INI format, MEDAF uses Python for configuration, because it is flexible.
 
-That file is the main entry point into your app.
+    - ```./configs/[app_id]/main.py``` : This is your configuration file. Multiple configuration files exist so not everything must be written in one file.
 
-### ```./configs/[app_name]/main.py```
+- ```./tests/``` : This is your testing folder.
 
-This is your configuration file. Multiple configuration files 
-exist so not everything must be written in one file.
+    - ```./tests/[app_id]/``` : This is your application testing folder.
 
-### ```./tests/```
-
-This is your testing folder, each subfolder belongs to it's 
-respective applcation.
-
-### ```./madafrc.py```
-
-This file stores the general configuration of the project.
+- ```./medafrc.py``` : This file stores the general configuration of the project.
 
 

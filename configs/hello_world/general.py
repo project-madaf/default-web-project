@@ -14,8 +14,3 @@ def general():
 
     # Assign an ID to your app.
     AssignID('hello_world')
-
-    config = AppConfig('madaf')
-
-    # Debug mode.
-    config.modify['Debug-Mode'] = True
