@@ -1,45 +1,27 @@
-<div align="center" style="display : flex; justify-content : center;">
-  <h1>This is a MADAF project.</h1>
-</div>
+# MEDAF Default Web Project
 
-This is a default MADAF web application project. This project uses:
-- ```madaf```
-- ```madaf_http```
+This is the official template for MEDAF Default Web Project. This template is minimal and only require a few set of plugin dependencies. The structure of the project is quite simple:
 
-## How to Run:
-
-Assuming that you already installed MADAF, type this:
-
-Bash:
-
-``` bash
-$ madaf depen install hello_world
-$ madaf run dev hello_world
+```
+./example/
+    config.py
+    main.py
+./project.py
 ```
 
-Powershell:
+You can ignore other files, this is the only files that you need to focus at.
 
-``` powershell
-> madaf depen install hello_world
-> madaf app run hello_world
+- ```./example/``` : This is a folder that contains an app called 'example'.
+- ```./project.py``` : This file contains the general configuration of the project.
+
+Each app folder contains a batch of files:
+
+- ```main.py``` : Main entry-point to your program.
+- ```config.py``` : App behaviour configuration.
+- ```routing.py``` : App routing configuration.
+
+Now, to run the project:
+
+```bash
+medaf run example # Run this command in the root directory of the project!
 ```
-
-Open [http://localhost:8080](http://localhost:8080) on the browser, you should see a text that said 'Hello, world!'. Note that you can build other kind of apps than just web apps.
-
-## Directory Structure:
-
--  ```./apps/``` : This is where you are going to store your applications.
-
-    - ```./apps/[app_id]/main.py``` : That file is the main entry point into your app.
-
-- ```./configs/``` : This is your configuration folder. Instead of using YAML, JSON, or INI format, MEDAF uses Python for configuration, because it is flexible.
-
-    - ```./configs/[app_id]/main.py``` : This is your configuration file. Multiple configuration files exist so not everything must be written in one file.
-
-- ```./tests/``` : This is your testing folder.
-
-    - ```./tests/[app_id]/``` : This is your application testing folder.
-
-- ```./medafrc.py``` : This file stores the general configuration of the project.
-
-
