@@ -1,6 +1,8 @@
 """This is your app. This file has to exist!
 """
 
+# Any class will be recognized as an app if the app's main class extends class 
+# StandardAppProperty or PluginAppProperty. Simple as that.
 from medaf.project.app import StandardAppProperty
 from medaf_http.route import route
 

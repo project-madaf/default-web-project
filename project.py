@@ -1,6 +1,7 @@
 """This will configure your project.
 """
 
+# This will add a few methods that you can use.
 from medaf.conf.project import ProjectConfigProperty
 
 class Main(ProjectConfigProperty):
@@ -23,3 +24,12 @@ class Main(ProjectConfigProperty):
         # order of your installed middleware matters! For example, middleware called 'example'
         # uses a middleware called 'example1', load 'example1' first!
         self.installed_middleware = []
+
+        # Set port.
+        self.port = 8080
+
+        # Set host.
+        self.host = '0.0.0.0'
+
+        # Set debug mode.
+        self.debug = True

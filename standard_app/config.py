@@ -1,6 +1,7 @@
 """This will configure your app.
 """
 
+# This will add a few methods that you can use.
 from medaf.conf.app import AppConfigProperty
 
 class Main(AppConfigProperty):
@@ -12,13 +13,10 @@ class Main(AppConfigProperty):
         # Set your app type. It could be standard or middleware.
         self.app_type = "standard"
 
+        # Some sort of alias name.
+        self.alias = "standard"
+
         # Set routing. This config will be used by medaf_http.
         self.route = {
             '/':'home'
         }
-
-        # Set port.
-        self.port = 8080
-
-        # Set host.
-        self.host = '0.0.0.0'
