@@ -2,12 +2,12 @@
 """
 
 # This will add a few methods that you can use.
-from medaf.conf.app import AppConfigProperty
+from medaf.conf.apps import AppConfigProperty
 
 class Main(AppConfigProperty):
     """This will configure your app. The name has to be named 'Main'!"""
 
-    def main(self) -> None:
+    def main(self):
         """'main' function has to be defined!"""
 
         # Set your app type. It could be standard or middleware.
@@ -18,5 +18,5 @@ class Main(AppConfigProperty):
 
         # Set routing. This config will be used by medaf_http.
         self.route = {
-            '/':'home'
+            "/home":"home"
         }
